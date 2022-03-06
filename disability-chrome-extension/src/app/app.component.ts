@@ -7,16 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'disability-chrome-extension';
-  stateOptions: any[];
   focusSelected = false;
   increaseTextButtonSelected = false;
   focusIconColor = "red";
   currentFocusIcon = "pi pi-eye-slash";
   currentIncreaseTextButtonIcon = "pi pi-eye-slash";
-  value1: string = "off";
   
   constructor() {
-    this.stateOptions = [{label: 'Off', value: 'off'}, {label: 'On', value: 'on'}];
+    
   }
 
   onFocusClick() {

@@ -11,6 +11,7 @@ import {PanelModule} from 'primeng/panel';
 import {MenuModule} from 'primeng/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TooltipModule} from 'primeng/tooltip';
+import {SliderModule} from 'primeng/slider';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {TooltipModule} from 'primeng/tooltip';
     SelectButtonModule,
     PanelModule,
     MenuModule,
-    TooltipModule
+    TooltipModule,
+    SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

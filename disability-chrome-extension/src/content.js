@@ -30,18 +30,6 @@ window.onload = function() {
             currentLargeDiv = undefined;
             
             this.style.filter = "blur(0px)";
-
-            for (const [num, attributes] of Object.entries(currentLargeDiv.childNodes)) {
-                for (var i = 0; i < largeDivsAndNavs.length; i++) {
-                    if (currentLargeDiv == largeDivsAndNavs[i]) {
-                        continue;
-                    }
-                    
-                    if (largeDivsAndNavs[i].id == attributes.id) {
-                        largeDivsAndNavs[i].style.filter = "blur(0px)";
-                    }
-                }
-            }
         }, false);
 
 
