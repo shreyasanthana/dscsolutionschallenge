@@ -15,9 +15,12 @@
     "lib": [
       "es2018",
       "dom"
+    ],
+    "types": [
+      "Chrome"
     ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false
-  }
+  },
 }

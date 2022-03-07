@@ -10,7 +10,12 @@
             <span [class]="currentFocusIcon" style="font-size: 1.5rem"></span>
           </button>
         </ng-template>
-        <p-slider [(ngModel)]="blurIntensity" [step]="1"></p-slider>
+        <div>
+          <p>This extension helps focus on what matters.</p>
+          <h5 *ngIf="focusSelected">Blur Intensity: {{blurIntensity}}px</h5>
+          <h5 *ngIf="!focusSelected">Toggle focus to change blur intensity</h5>
+          <p-slider [animate] = "true" [(ngModel)] = "blurIntensity" [step]="1" [min]="1" [max]="6" [disabled]="!focusSelected" (onSlideEnd)="updateBlurIntensity()"></p-slider>
+        </div>
       </p-panel>
     </div>
 
