@@ -15,6 +15,13 @@
      "default_popup": "index.html"
     },
     "permissions": [
-     "activeTab"
+     "activeTab",
+     "storage"
+    ],
+    "content_security_policy": "script-src-element ‘self’ ‘unsafe-eval’; object-src ‘self’",
+    "web_accessible_resources": [
+      "assets/css/* ",
+      "assets/js/*",
+      "assets/fonts/*"
     ]
   }

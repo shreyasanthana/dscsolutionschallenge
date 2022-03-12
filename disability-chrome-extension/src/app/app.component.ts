@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   blurIntensity: number = 3;
 
   ngOnInit() {
-    // chrome.storage.sync.get(['focusSelected'], function(result) {
+    // chrome.storage.local.get(['focusSelected'], function(result) {
     //   this.focusSelected = result;
     //   this.setFocusIcons();
     // });
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
     this.setFocusIcons();
     
     
-    //chrome.storage.sync.set({'focusSelected': this.focusSelected});
+    // chrome.storage.local.set({'focusSelected': this.focusSelected});
     if (this.focusSelected) {
       chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
         let message = "enableFocusHoveredArea:" + this.blurIntensity;
