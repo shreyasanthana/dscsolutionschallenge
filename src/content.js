@@ -1,5 +1,3 @@
-const { element } = require("protractor");
-
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (
     message.includes("enableFocusHoveredArea") ||
@@ -14,6 +12,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     enableTextHighlighting();
   } else if (message.includes("disableTextHighlighting")) {
     disableTextHighlighting();
+  } else if (message.includes("enableAutoScrolling")) {
+    enableAutoScrolling();
+  } else if (message.includes("disableAutoScrolling")) {
+    disableAutoScrolling();
   } else if (
     message.includes("enableIncreaseTextButton") ||
     message.includes("updateButtonColor")
@@ -22,15 +24,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     var val = message.indexOf(":") + 1;
     var valOfColor = message.substring(val);
     enableButton(valOfColor);
-  } else if (message.includes("enableAutoScrolling")) {
-    //fix this part
-    var val = message.indexOf(":") + 1;
-    var valOfColor = message.substring(val);
-    enableButton(valOfColor);
-  } else if (message.includes("enableAutoScrolling")) {
-    enableAutoScrolling();
-  } else if (message.includes("disableAutoScrolling")) {
-    disableAutoScrolling();
   }
   //NEED ONE FOR DISABLE BUTTON
 });
@@ -212,16 +205,14 @@ function val1ColorGreaterThanVal2Color(val1, val2) {
 function enableAutoScrolling() {
   let index = 0;
 
-  let sortedElems = [h1s, h2s, h3s].sort(
-    (e1, e2) => e1.scrollHeight > e2.scrollHeight
+  let sortedElems = [...h1s, ...h2s, ...h3s].sort(
+    (e1, e2) => e1.offsetTop - e2.offsetTop
   );
-
   document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowDown" && index < sortedElems.length - 1) {
+    if (e.key === "s" && index < sortedElems.length - 1) {
       index++;
       sortedElems[index].scrollIntoView();
-      console.log(sortedElems[index]);
-    } else if (e.key === "ArrowUp" && index >= 0) {
+    } else if (e.key === "w" && index >= 0) {
       index--;
       sortedElems[index].scrollIntoView();
     }

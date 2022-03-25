@@ -102,6 +102,23 @@ export class AppComponent implements OnInit {
     }
   }
 
+  onAutoScrollButtonClick() {
+    this.autoScrollingSelected = !this.autoScrollingSelected;
+    this.setAutoScrollIcons();
+
+    if (this.autoScrollingSelected) {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        let message = "enableAutoScrolling";
+        chrome.tabs.sendMessage(tabs[0].id, message);
+      });
+    } else {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        let message = "disableAutoScrolling";
+        chrome.tabs.sendMessage(tabs[0].id, message);
+      });
+    }
+  }
+
   //step 2
   onIncreaseTextButtonClick() {
     this.increaseTextButtonSelected = !this.increaseTextButtonSelected;
@@ -124,24 +141,5 @@ export class AppComponent implements OnInit {
       let message = "updateButtonColor:" + this.color;
       chrome.tabs.sendMessage(tabs[0].id, message);
     });
-  }
-
-  onAutoScrollButtonClick() {
-    console.log("auto scrolling!");
-
-    this.autoScrollingSelected = !this.autoScrollingSelected;
-    this.setAutoScrollIcons();
-
-    if (this.textHighlightingSelected) {
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        let message = "enableAutoScrolling";
-        chrome.tabs.sendMessage(tabs[0].id, message);
-      });
-    } else {
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        let message = "disableAutoScrolling";
-        chrome.tabs.sendMessage(tabs[0].id, message);
-      });
-    }
   }
 }
