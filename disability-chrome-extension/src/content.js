@@ -20,6 +20,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         //NEED ONE FOR DISABLE BUTTON
     } else if (message.includes("enableTextToSpeech")) {
         enableTextToSpeech();
+<<<<<<< Updated upstream:disability-chrome-extension/src/content.js
+>>>>>>> Stashed changes:src/content.js
+=======
 >>>>>>> Stashed changes:src/content.js
     }
 });
@@ -147,6 +150,8 @@ function enableTextToSpeech() {
                 if (textElementIndex < 0) {
                     textElementIndex = textElementsList.length - 1;
                 }
+<<<<<<< Updated upstream:disability-chrome-extension/src/content.js
+=======
 
                 textElementsList[textElementIndex].style.border = "solid";
                 textToSpeak = textElementsList[textElementIndex].textContent;
@@ -160,11 +165,28 @@ function enableTextToSpeech() {
                 if (textElementIndex >= textElementsList.length) {
                     textElementIndex = 0;
                 }
+>>>>>>> Stashed changes:src/content.js
 
                 textElementsList[textElementIndex].style.border = "solid";
                 textToSpeak = textElementsList[textElementIndex].textContent;
                 updateTextToSpeechSound(textElementIndex, textToSpeak, storedAudioFiles);
                 break;
+<<<<<<< Updated upstream:disability-chrome-extension/src/content.js
+            case 39:
+                console.log("Right arrow key pressed");
+                textElementsList[textElementIndex].style.border = "transparent";
+
+                textElementIndex++;
+                if (textElementIndex >= textElementsList.length) {
+                    textElementIndex = 0;
+                }
+
+                textElementsList[textElementIndex].style.border = "solid";
+                textToSpeak = textElementsList[textElementIndex].textContent;
+                updateTextToSpeechSound(textElementIndex, textToSpeak, storedAudioFiles);
+                break;
+=======
+>>>>>>> Stashed changes:src/content.js
         }
     }
 }

@@ -44,7 +44,10 @@ export class AppComponent implements OnInit {
   }
 
 <<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
+<<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
 =======
+=======
+>>>>>>> Stashed changes:src/app/app.component.ts
   setTextToSpeechIcons() {
     if (this.textToSpeechSelected) {
       this.currentTextToSpeechIcon = "pi pi-eye";
@@ -97,10 +100,39 @@ export class AppComponent implements OnInit {
   }
 
 <<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
+<<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
 =======
   onTextToSpeechClick() {
     this.textToSpeechSelected = !this.textToSpeechSelected;
     this.setTextToSpeechIcons();
+=======
+  onTextToSpeechClick() {
+    this.textToSpeechSelected = !this.textToSpeechSelected;
+    this.setTextToSpeechIcons();
+
+    if (this.textToSpeechSelected) {
+      chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+        let message = "enableTextToSpeech";
+        chrome.tabs.sendMessage(tabs[0].id, message);
+      });
+    } else {
+      chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+        let message = "disableTextToSpeech";
+        chrome.tabs.sendMessage(tabs[0].id, message);
+      });
+    }
+  }
+
+
+  //step 1
+  setIncreaseButtonSizeIcons() {
+    if (this.increaseTextButtonSelected) {
+      this.currentIncreaseTextButtonIcon = "pi pi-eye";
+    } else {
+      this.currentIncreaseTextButtonIcon = "pi pi-eye-slash";
+    }
+  }
+>>>>>>> Stashed changes:src/app/app.component.ts
 
     if (this.textToSpeechSelected) {
       chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
