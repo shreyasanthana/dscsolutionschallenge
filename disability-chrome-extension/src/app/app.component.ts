@@ -45,7 +45,13 @@ export class AppComponent implements OnInit {
 
 <<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
 <<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
+<<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
+<<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
 =======
+=======
+>>>>>>> Stashed changes:src/app/app.component.ts
+=======
+>>>>>>> Stashed changes:src/app/app.component.ts
 =======
 >>>>>>> Stashed changes:src/app/app.component.ts
   setTextToSpeechIcons() {
@@ -101,11 +107,17 @@ export class AppComponent implements OnInit {
 
 <<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
 <<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
+<<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
+<<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
 =======
   onTextToSpeechClick() {
     this.textToSpeechSelected = !this.textToSpeechSelected;
     this.setTextToSpeechIcons();
 =======
+=======
+>>>>>>> Stashed changes:src/app/app.component.ts
+=======
+>>>>>>> Stashed changes:src/app/app.component.ts
   onTextToSpeechClick() {
     this.textToSpeechSelected = !this.textToSpeechSelected;
     this.setTextToSpeechIcons();
@@ -122,6 +134,32 @@ export class AppComponent implements OnInit {
       });
     }
   }
+<<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
+<<<<<<< Updated upstream:disability-chrome-extension/src/app/app.component.ts
+=======
+=======
+
+
+  //step 1
+  setIncreaseButtonSizeIcons() {
+    if (this.increaseTextButtonSelected) {
+      this.currentIncreaseTextButtonIcon = "pi pi-eye";
+    } else {
+      this.currentIncreaseTextButtonIcon = "pi pi-eye-slash";
+    }
+  }
+>>>>>>> Stashed changes:src/app/app.component.ts
+
+
+  //step 1
+  setIncreaseButtonSizeIcons() {
+    if (this.increaseTextButtonSelected) {
+      this.currentIncreaseTextButtonIcon = "pi pi-eye";
+    } else {
+      this.currentIncreaseTextButtonIcon = "pi pi-eye-slash";
+    }
+  }
+>>>>>>> Stashed changes:src/app/app.component.ts
 
 
   //step 1

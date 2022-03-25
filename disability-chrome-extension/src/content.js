@@ -21,6 +21,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     } else if (message.includes("enableTextToSpeech")) {
         enableTextToSpeech();
 <<<<<<< Updated upstream:disability-chrome-extension/src/content.js
+<<<<<<< Updated upstream:disability-chrome-extension/src/content.js
+<<<<<<< Updated upstream:disability-chrome-extension/src/content.js
+>>>>>>> Stashed changes:src/content.js
+=======
+>>>>>>> Stashed changes:src/content.js
+=======
 >>>>>>> Stashed changes:src/content.js
 =======
 >>>>>>> Stashed changes:src/content.js
@@ -151,12 +157,33 @@ function enableTextToSpeech() {
                     textElementIndex = textElementsList.length - 1;
                 }
 <<<<<<< Updated upstream:disability-chrome-extension/src/content.js
+<<<<<<< Updated upstream:disability-chrome-extension/src/content.js
+<<<<<<< Updated upstream:disability-chrome-extension/src/content.js
 =======
+=======
+=======
+>>>>>>> Stashed changes:src/content.js
 
                 textElementsList[textElementIndex].style.border = "solid";
                 textToSpeak = textElementsList[textElementIndex].textContent;
                 updateTextToSpeechSound(textElementIndex, textToSpeak, storedAudioFiles);
                 break;
+            case 39:
+                console.log("Right arrow key pressed");
+                textElementsList[textElementIndex].style.border = "transparent";
+
+                textElementIndex++;
+                if (textElementIndex >= textElementsList.length) {
+                    textElementIndex = 0;
+                }
+<<<<<<< Updated upstream:disability-chrome-extension/src/content.js
+>>>>>>> Stashed changes:src/content.js
+
+                textElementsList[textElementIndex].style.border = "solid";
+                textToSpeak = textElementsList[textElementIndex].textContent;
+                updateTextToSpeechSound(textElementIndex, textToSpeak, storedAudioFiles);
+                break;
+<<<<<<< Updated upstream:disability-chrome-extension/src/content.js
             case 39:
                 console.log("Right arrow key pressed");
                 textElementsList[textElementIndex].style.border = "transparent";
@@ -187,6 +214,8 @@ function enableTextToSpeech() {
                 break;
 =======
 >>>>>>> Stashed changes:src/content.js
+=======
+>>>>>>> Stashed changes:src/content.js
         }
     }
 }
@@ -198,6 +227,24 @@ function updateTextToSpeechSound(currentElementIdx, textContent, storedAudioFile
     synthesizeSpeech(textContent);
 
 
+=======
+
+                textElementsList[textElementIndex].style.border = "solid";
+                textToSpeak = textElementsList[textElementIndex].textContent;
+                updateTextToSpeechSound(textElementIndex, textToSpeak, storedAudioFiles);
+                break;
+        }
+    }
+}
+
+function updateTextToSpeechSound(currentElementIdx, textContent, storedAudioFiles) {
+    if (currentElementIdx in storedAudioFiles) {
+        //Stop current Audio and play stored audio
+    }
+    synthesizeSpeech(textContent);
+
+
+>>>>>>> Stashed changes:src/content.js
 }
 
 function synthesizeSpeech(text) {
