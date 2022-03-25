@@ -1,6 +1,7 @@
 {
   "name": "disability-chrome-extension",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~11.2.8",
     "@angular/router": "~11.2.8",
     "@types/chrome": "0.0.179",
+    "buffer": "^6.0.3",
     "font-awesome": "^4.7.0",
     "primeicons": "^4.1.0",
     "primeng": "^11.4.5",

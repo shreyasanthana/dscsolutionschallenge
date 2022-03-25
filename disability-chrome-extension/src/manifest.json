@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
   
     "name": "Disability Chrome Extension",
     "description": "This extension will help people with disabilites.",
@@ -10,11 +10,15 @@
           "js": ["content.js"]
         }
     ],
-    "browser_action": {
+    "action": {
      "default_icon": "icon.png",
      "default_popup": "index.html"
     },
+    "background": {
+      "service_worker": "background.js"
+    },
     "permissions": [
+<<<<<<< Updated upstream:disability-chrome-extension/src/manifest.json
      "activeTab",
      "storage"
     ],
@@ -24,4 +28,15 @@
       "assets/js/*",
       "assets/fonts/*"
     ]
+=======
+     "activeTab"
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+    },
+    "web_accessible_resources": [{
+      "resources": ["*.mp3", "*.base64", "background.js"],
+      "matches": ["<all_urls>"]
+    }]
+>>>>>>> Stashed changes:dist/disability-chrome-extension/manifest.json
   }
