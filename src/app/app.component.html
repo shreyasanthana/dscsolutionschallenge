@@ -61,7 +61,20 @@
       </p-panel>
     </div>
     
-
+    <div class="less-space">
+      <p-panel header="Text-to-Speech" [toggleable]="true" iconPos="end" collapsed="true">
+        <ng-template pTemplate="icons">
+          <button pButton class="p-panel-header-icon p-link" (click)="onTextToSpeechClick()" pTooltip="Toggle text-to-speech on this page">
+            <span [class]="currentTextToSpeechIcon" style="font-size: 1.5rem"></span>
+          </button>
+        </ng-template>
+        <div>
+          <p>
+            It will speak whatever text is being hovered on. Use arrow keys to change the hover.
+          </p>
+        </div>
+      </p-panel>
+    </div>
     
 
     

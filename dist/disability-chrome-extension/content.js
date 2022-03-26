@@ -14,8 +14,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         var val = message.indexOf(":") + 1;
         var valOfColor = message.substring(val);
         enableButton(valOfColor);
-    } 
-    //NEED ONE FOR DISABLE BUTTON
+    } else if(message.includes("disableIncreaseTextButton")) {
+        //NEED ONE FOR DISABLE BUTTON
+    } else if (message.includes("enableTextToSpeech")) {
+        enableTextToSpeech();
+    }
 });
 
 var divs = document.getElementsByTagName('div');
@@ -47,8 +50,6 @@ for (var i = 0; i < largeDivsAndNavs.length; i++) {
         }
     }
 }
-
-console.log(largeDivsAndNavs);
 
 function enableFocusHoveredArea(blurIntensity) {
     for (var i = 0; i < largeDivsAndNavs.length; i++) {
@@ -87,8 +88,6 @@ function disableTextHighlighting() {
 }
 
 function enableTextHighlighting() {
-    console.log("ENABLE TEXT HIGHLIGHTING")
-    console.log(textElements)
     for (var i = 0; i < textElements.length; i++) {
         for (var element = 0; element < textElements[i].length; element++) {
             var originalBackgroundColor = "transparent";
@@ -124,12 +123,72 @@ function enableButton(valOfColor) {
     }  
 }
 
+function enableTextToSpeech() {
+    textElementsList = [];
+    for (textElement of textElements) {
+        for (const [key, value] of Object.entries(textElement)) {
+            textElementsList.push(value);
+        }
+    }
+    let textElementIndex = 0;
+    var storedAudioFiles = new Object();
+    document.onkeydown = function (event) {
+        switch (event.keyCode) {
+            case 37:
+                console.log("Left arrow key pressed");
+                textElementsList[textElementIndex].style.border = "transparent";
+                
+                textElementIndex--;
+                if (textElementIndex < 0) {
+                    textElementIndex = textElementsList.length - 1;
+                }
 
+                textElementsList[textElementIndex].style.border = "solid";
+                textToSpeak = textElementsList[textElementIndex].textContent;
+                synthesizeSpeech(textToSpeak);
+                break;
+            case 39:
+                console.log("Right arrow key pressed");
+                textElementsList[textElementIndex].style.border = "transparent";
+
+                textElementIndex++;
+                if (textElementIndex >= textElementsList.length) {
+                    textElementIndex = 0;
+                }
+
+                textElementsList[textElementIndex].style.border = "solid";
+                textToSpeak = textElementsList[textElementIndex].textContent;
+                synthesizeSpeech(textToSpeak);
+                break;
+        }
+    }
+}
+
+function synthesizeSpeech(text) {
+    const synthesizeURL = "https://texttospeech.googleapis.com/v1/text:synthesize?key=AIzaSyDvALGSWt0xrrvSM6Q52art2s1nQuglQZo";
+    const body = {
+      "input": {"text": text},
+      "voice": {"languageCode": "en-US", "ssmlGender": "FEMALE"},
+      "audioConfig": {"audioEncoding": "MP3"}
+    }
+  
+    fetch(synthesizeURL, {
+        method: 'POST',
+        body: JSON.stringify(body),
+    }).then(response => response.json())
+    .then(data => {
+        const playableAudioContent = data.audioContent;
+        console.log(playableAudioContent);
+        chrome.runtime.sendMessage({
+            playableAudioContent
+        });
+    });
+}
 
 function applyFontAndHighlight(element, color) {
     try {
         
-        element.style.fontSize = "110%";
+        element.style.fontSize = "120%";
         // changeColor(element);
         element.style.background = color;
         //element.style.background = '#708090';

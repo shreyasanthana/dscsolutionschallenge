@@ -10,10 +10,12 @@ export class AppComponent implements OnInit {
   focusSelected = false;
   textHighlightingSelected = false;
   increaseTextButtonSelected = false;
+  textToSpeechSelected = false;
   focusIconColor = "red";
   currentFocusIcon = "pi pi-eye-slash";
   currentTextHighlightingIcon = "pi pi-eye-slash";
   currentIncreaseTextButtonIcon = "pi pi-eye-slash";
+  currentTextToSpeechIcon = "pi pi-eye-slash";
   blurIntensity: number = 3;
   color: string;
 
@@ -39,6 +41,31 @@ export class AppComponent implements OnInit {
       this.currentTextHighlightingIcon = "pi pi-eye";
     } else {
       this.currentTextHighlightingIcon = "pi pi-eye-slash";
+    }
+  }
+
+  onTextToSpeechClick() {
+    this.textToSpeechSelected = !this.textToSpeechSelected;
+    this.setTextToSpeechIcons();
+
+    if (this.textToSpeechSelected) {
+      chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+        let message = "enableTextToSpeech";
+        chrome.tabs.sendMessage(tabs[0].id, message);
+      });
+    } else {
+      chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+        let message = "disableTextToSpeech";
+        chrome.tabs.sendMessage(tabs[0].id, message);
+      });
+    }
+  }
+
+  setTextToSpeechIcons() {
+    if (this.textToSpeechSelected) {
+      this.currentTextToSpeechIcon = "pi pi-eye";
+    } else {
+      this.currentTextToSpeechIcon = "pi pi-eye-slash";
     }
   }
 

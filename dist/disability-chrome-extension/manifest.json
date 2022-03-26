@@ -1,20 +1,30 @@
 {
-    "manifest_version": 2,
-  
-    "name": "Disability Chrome Extension",
-    "description": "This extension will help people with disabilites.",
-    "version": "2.0",
-    "content_scripts": [
-        {
-          "matches": ["<all_urls>"],
-          "js": ["content.js"]
-        }
-    ],
-    "browser_action": {
-     "default_icon": "icon.png",
-     "default_popup": "index.html"
-    },
-    "permissions": [
-     "activeTab"
-    ]
-  }
+  "manifest_version": 3,
+
+  "name": "Disability Chrome Extension",
+  "description": "This extension will help people with disabilites.",
+  "version": "2.0",
+  "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+  ],
+  "action": {
+   "default_icon": "icon.png",
+   "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+   "activeTab"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "web_accessible_resources": [{
+    "resources": ["*.mp3", "*.base64", "background.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
