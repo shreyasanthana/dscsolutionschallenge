@@ -1,0 +1,186 @@
+<div class="body">
+  <div class="header">
+    <img src="icon.png" alt="Logo" class="center" />
+  </div>
+  <div class="space">
+    <div>
+      <p-panel
+        header="Focus Content"
+        [toggleable]="true"
+        iconPos="end"
+        collapsed="true"
+        [class.color]="focusIconColor"
+      >
+        <ng-template pTemplate="icons">
+          <button
+            pButton
+            class="p-panel-header-icon p-link"
+            (click)="onFocusClick()"
+            pTooltip="Toggle focused content on the page"
+          >
+            <span [class]="currentFocusIcon" style="font-size: 1.5rem"></span>
+          </button>
+        </ng-template>
+        <div>
+          <p>
+            This helps focus on what matters. Improve your focus by turning on
+            this extension. It will blur the content around the page, keeping
+            important headers like navigation bars, in order to make the process
+            of activities like reading a Wikepedia article more efficient!
+          </p>
+          <h5 *ngIf="focusSelected">Blur Intensity: {{ blurIntensity }}px</h5>
+          <h5 *ngIf="!focusSelected">Toggle focus to change blur intensity</h5>
+          <p-slider
+            [animate]="true"
+            [(ngModel)]="blurIntensity"
+            [step]="1"
+            [min]="1"
+            [max]="6"
+            [disabled]="!focusSelected"
+            (onSlideEnd)="updateBlurIntensity()"
+          ></p-slider>
+        </div>
+      </p-panel>
+    </div>
+
+    <div class="less-space">
+      <p-panel
+        header="Text Highlighting"
+        [toggleable]="true"
+        iconPos="end"
+        collapsed="true"
+      >
+        <ng-template pTemplate="icons">
+          <button
+            pButton
+            class="p-panel-header-icon p-link"
+            (click)="onTextHighlightingClick()"
+            pTooltip="Toggle text highlighting on the page"
+          >
+            <span
+              [class]="currentTextHighlightingIcon"
+              style="font-size: 1.5rem"
+            ></span>
+          </button>
+        </ng-template>
+        <div>
+          <p>
+            This makes reading paragraphs and text alike a lot easier. It will
+            highlight the text you are reading in order to make for a smoother
+            reading experience.
+          </p>
+        </div>
+      </p-panel>
+    </div>
+
+    <div class="less-space">
+      <p-panel
+        header="Increase Text and Button Sizing"
+        [toggleable]="true"
+        iconPos="end"
+        collapsed="true"
+        [class.color]="focusIconColor"
+      >
+        <ng-template pTemplate="icons">
+          <button
+            pButton
+            class="p-panel-header-icon p-link"
+            (click)="onIncreaseTextButtonClick()"
+            pTooltip="Toggle increased text and button sizing"
+          >
+            <span
+              [class]="currentIncreaseTextButtonIcon"
+              style="font-size: 1.5rem"
+            ></span>
+          </button>
+        </ng-template>
+
+        <div>
+          <p>
+            This helps increase the size of button and select its color to make
+            buttons easier to read.
+          </p>
+          <h5 *ngIf="increaseTextButtonSelected">
+            Button Color: {{ color }}px
+          </h5>
+          <h5 *ngIf="!increaseTextButtonSelected">Select button color</h5>
+          <p-colorPicker
+            [(ngModel)]="color"
+            [inline]="true"
+            [disabled]="!increaseTextButtonSelected"
+            (onChange)="updateButtonColor()"
+          ></p-colorPicker>
+          <h5 *ngIf="increaseTextButtonSelected">Text Size: {{ textSize }}%</h5>
+          <h5 *ngIf="!increaseTextButtonSelected">Select text size</h5>
+          <p-slider
+            [animate]="true"
+            [(ngModel)]="textSize"
+            [step]="10"
+            [min]="110"
+            [max]="150"
+            [disabled]="!increaseTextButtonSelected"
+            (onSlideEnd)="updateTextSize()"
+          ></p-slider>
+        </div>
+      </p-panel>
+    </div>
+
+    <div class="less-space">
+      <p-panel
+        header="Text-to-Speech"
+        [toggleable]="true"
+        iconPos="end"
+        collapsed="true"
+      >
+        <ng-template pTemplate="icons">
+          <button
+            pButton
+            class="p-panel-header-icon p-link"
+            (click)="onTextToSpeechClick()"
+            pTooltip="Toggle text-to-speech on this page"
+          >
+            <span
+              [class]="currentTextToSpeechIcon"
+              style="font-size: 1.5rem"
+            ></span>
+          </button>
+        </ng-template>
+        <div>
+          <p>
+            It will speak whatever text is being hovered on. Use arrow keys to
+            change the hover.
+          </p>
+        </div>
+      </p-panel>
+    </div>
+
+    <div class="less-space">
+      <p-panel
+        header="Auto Scrolling"
+        [toggleable]="true"
+        iconPos="end"
+        collapsed="true"
+      >
+        <ng-template pTemplate="icons">
+          <button
+            pButton
+            class="p-panel-header-icon p-link"
+            (click)="onAutoScrollButtonClick()"
+            pTooltip="Toggle keyboard auto scrolling on the page"
+          >
+            <span
+              [class]="currentAutoScrollIcon"
+              style="font-size: 1.5rem"
+            ></span>
+          </button>
+        </ng-template>
+        <div>
+          <p>
+            This lets you scroll through content easy! Use the up and down arrow
+            keys to jump to important content quickly.
+          </p>
+        </div>
+      </p-panel>
+    </div>
+  </div>
+</div>
