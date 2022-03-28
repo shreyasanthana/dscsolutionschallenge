@@ -54,6 +54,9 @@
           <h5 *ngIf="increaseTextButtonSelected">Button Color: {{color}}px</h5>
           <h5 *ngIf="!increaseTextButtonSelected">Select button color</h5>
           <p-colorPicker [(ngModel)]= "color" [inline] = "true" [disabled]="!increaseTextButtonSelected" (onChange)="updateButtonColor()"></p-colorPicker>
+          <h5 *ngIf="increaseTextButtonSelected">Text Size: {{textSize}}%</h5>
+          <h5 *ngIf="!increaseTextButtonSelected">Select text size</h5>
+          <p-slider [animate] = "true" [(ngModel)] = "textSize" [step]="10" [min]="110" [max]="150" [disabled]="!increaseTextButtonSelected" (onSlideEnd)="updateTextSize()"></p-slider>
 
         </div>
 

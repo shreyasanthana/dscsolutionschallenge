@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   currentTextToSpeechIcon = "pi pi-eye-slash";
   blurIntensity: number = 3;
   color: string;
+  textSize: number = 110;
 
   ngOnInit() {
     // chrome.storage.sync.get(['focusSelected'], function(result) {
@@ -123,7 +124,7 @@ export class AppComponent implements OnInit {
   }
 
 
-//step 2
+
   onIncreaseTextButtonClick() {
     this.increaseTextButtonSelected = !this.increaseTextButtonSelected;
     this.setIncreaseButtonSizeIcons();
@@ -139,10 +140,17 @@ export class AppComponent implements OnInit {
       });
     }
   }
-//step 3
+
   updateButtonColor() {
     chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
       let message = "updateButtonColor:" + this.color;
+      chrome.tabs.sendMessage(tabs[0].id, message);
+    });
+  }
+  updateTextSize() {
+    chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+      let message = "updateTextSize:" + this.textSize;
+      console.log(message);
       chrome.tabs.sendMessage(tabs[0].id, message);
     });
   }

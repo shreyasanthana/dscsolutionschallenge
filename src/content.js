@@ -10,12 +10,15 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     } else if (message.includes("disableTextHighlighting")) {
         disableTextHighlighting();
     } else if(message.includes("enableIncreaseTextButton") || message.includes("updateButtonColor")) {
-        //fix this part
-        var val = message.indexOf(":") + 1;
-        var valOfColor = message.substring(val);
-        enableButton(valOfColor);
-    } else if(message.includes("disableIncreaseTextButton")) {
-        //NEED ONE FOR DISABLE BUTTON
+            var val = message.indexOf(":") + 1;
+            var valOfColor = message.substring(val);
+        enableButton(valOfColor, "110");
+    } else if (message.includes("enableIncreaseTextButton") || message.includes("updateTextSize")){
+        var sizeOfText = message.indexOf(":") + 1;
+        var sizeOfTextFormat = message.substring(sizeOfText);
+        enableButton(valOfColor, sizeOfTextFormat);
+    } else if (message.includes("disableIncreaseTextButton")) {
+        disableIncreaseTextButton();
     } else if (message.includes("enableTextToSpeech")) {
         enableTextToSpeech();
     }
@@ -111,18 +114,30 @@ function enableTextHighlighting() {
     }
 }
 
-//WORK HERE NEXT
-function enableButton(valOfColor) {
+function enableButton(valOfColor, sizeOfTextFormat) {
     let buttons = document.getElementsByTagName("button");
     for (button of buttons) {
-        applyFontAndHighlight(button, valOfColor);
+        applyFontAndHighlight(button, valOfColor, sizeOfTextFormat);
     }
-    let images = document.getElementsByTagName("svg");
-    for (image in images) {
-        applyImageScaling(image);
-    }  
 }
 
+function disableIncreaseTextButton() {
+    window.location.reload();
+}
+
+function applyFontAndHighlight(element, color, sizeOfTextFormat) {
+    try {
+        
+        element.style.fontSize = sizeOfTextFormat + "%";
+        element.style.background = color;
+    }
+    catch (exception_var) {
+        console.log("no changes needed");
+    }
+    if (element.hasChildNodes()) {
+        element.childNodes.forEach(applyFontAndHighlight)
+    } 
+} 
 function enableTextToSpeech() {
     textElementsList = [];
     for (textElement of textElements) {
@@ -185,45 +200,6 @@ function synthesizeSpeech(text) {
     });
 }
 
-function applyFontAndHighlight(element, color) {
-    try {
-        
-        element.style.fontSize = "120%";
-        // changeColor(element);
-        element.style.background = color;
-        //element.style.background = '#708090';
-        console.log("made a change"); 
-        try {
-            element.style.width = "50%";
-            element.style.height = "50%";
-        } catch (exception) {
-            console.log("no changes needed");
-        }
-    }
-    catch (exception_var) {
-        console.log("no changes needed");
-    }
-    if (element.hasChildNodes()) {
-        element.childNodes.forEach(applyFontAndHighlight)
-    } 
-} 
-
-function applyImageScaling(element) {
-    try {
-        element.style.width = "120%";
-        element.style.height = "120%";
-        console.log("changed image size"); 
-    }
-    
-    catch (exception_var) {
-        console.log("no changes needed");
-    }
-    if (element.hasChildNodes()) {
-        element.childNodes.forEach(applyImageScaling)
-    } 
-}
-
-//end of new code
 function val1ColorGreaterThanVal2Color(val1, val2) {
     console.log("FIRST STYLE COLOR: " + color1);
     console.log("Hex " + val2);
