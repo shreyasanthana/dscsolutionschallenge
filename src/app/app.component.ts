@@ -16,6 +16,8 @@ export class AppComponent implements OnInit {
   currentIncreaseTextButtonIcon = "pi pi-eye-slash";
   blurIntensity: number = 3;
   color: string;
+  //edit here
+  textSize: number = 110;
 
   ngOnInit() {
     // chrome.storage.sync.get(['focusSelected'], function(result) {
@@ -116,6 +118,14 @@ export class AppComponent implements OnInit {
   updateButtonColor() {
     chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
       let message = "updateButtonColor:" + this.color;
+      chrome.tabs.sendMessage(tabs[0].id, message);
+    });
+  }
+  //new code
+  updateTextSize() {
+    chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+      let message = "updateTextSize:" + this.textSize;
+      console.log(message);
       chrome.tabs.sendMessage(tabs[0].id, message);
     });
   }

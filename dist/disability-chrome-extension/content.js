@@ -10,13 +10,18 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     } else if (message.includes("disableTextHighlighting")) {
         disableTextHighlighting();
     } else if(message.includes("enableIncreaseTextButton") || message.includes("updateButtonColor")) {
-        //fix this part
-        var val = message.indexOf(":") + 1;
-        var valOfColor = message.substring(val);
-        enableButton(valOfColor);
+            var val = message.indexOf(":") + 1;
+            var valOfColor = message.substring(val);
+        enableButton(valOfColor, "110");
+    } else if (message.includes("enableIncreaseTextButton") || message.includes("updateTextSize")){
+        var sizeOfText = message.indexOf(":") + 1;
+        var sizeOfTextFormat = message.substring(sizeOfText);
+        enableButton(valOfColor, sizeOfTextFormat);
+    } else if (message.includes("disableIncreaseTextButton")) {
+        disableIncreaseTextButton();
     } 
-    //NEED ONE FOR DISABLE BUTTON
-});
+}
+);
 
 var divs = document.getElementsByTagName('div');
 var paragraphs = document.getElementsByTagName('p');
@@ -48,7 +53,6 @@ for (var i = 0; i < largeDivsAndNavs.length; i++) {
     }
 }
 
-console.log(largeDivsAndNavs);
 
 function enableFocusHoveredArea(blurIntensity) {
     for (var i = 0; i < largeDivsAndNavs.length; i++) {
@@ -87,8 +91,6 @@ function disableTextHighlighting() {
 }
 
 function enableTextHighlighting() {
-    console.log("ENABLE TEXT HIGHLIGHTING")
-    console.log(textElements)
     for (var i = 0; i < textElements.length; i++) {
         for (var element = 0; element < textElements[i].length; element++) {
             var originalBackgroundColor = "transparent";
@@ -112,34 +114,22 @@ function enableTextHighlighting() {
     }
 }
 
-//WORK HERE NEXT
-function enableButton(valOfColor) {
+function enableButton(valOfColor, sizeOfTextFormat) {
     let buttons = document.getElementsByTagName("button");
     for (button of buttons) {
-        applyFontAndHighlight(button, valOfColor);
+        applyFontAndHighlight(button, valOfColor, sizeOfTextFormat);
     }
-    let images = document.getElementsByTagName("svg");
-    for (image in images) {
-        applyImageScaling(image);
-    }  
 }
 
+function disableIncreaseTextButton() {
+    window.location.reload();
+}
 
-
-function applyFontAndHighlight(element, color) {
+function applyFontAndHighlight(element, color, sizeOfTextFormat) {
     try {
         
-        element.style.fontSize = "110%";
-        // changeColor(element);
+        element.style.fontSize = sizeOfTextFormat + "%";
         element.style.background = color;
-        //element.style.background = '#708090';
-        console.log("made a change"); 
-        try {
-            element.style.width = "50%";
-            element.style.height = "50%";
-        } catch (exception) {
-            console.log("no changes needed");
-        }
     }
     catch (exception_var) {
         console.log("no changes needed");
@@ -149,22 +139,6 @@ function applyFontAndHighlight(element, color) {
     } 
 } 
 
-function applyImageScaling(element) {
-    try {
-        element.style.width = "120%";
-        element.style.height = "120%";
-        console.log("changed image size"); 
-    }
-    
-    catch (exception_var) {
-        console.log("no changes needed");
-    }
-    if (element.hasChildNodes()) {
-        element.childNodes.forEach(applyImageScaling)
-    } 
-}
-
-//end of new code
 function val1ColorGreaterThanVal2Color(val1, val2) {
     console.log("FIRST STYLE COLOR: " + color1);
     console.log("Hex " + val2);
