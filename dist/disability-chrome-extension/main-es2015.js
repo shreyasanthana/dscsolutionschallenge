@@ -70,10 +70,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function AppComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
-    const _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_6_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11); const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r10.onFocusClick(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 14);
+    const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_6_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r12); const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r11.onFocusClick(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -95,10 +95,10 @@ function AppComponent_h5_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function AppComponent_ng_template_15_Template(rf, ctx) { if (rf & 1) {
-    const _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_15_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r13); const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r12.onTextHighlightingClick(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 14);
+    const _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_15_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r14); const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r13.onTextHighlightingClick(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -106,10 +106,10 @@ function AppComponent_ng_template_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r3.currentTextHighlightingIcon);
 } }
 function AppComponent_ng_template_21_Template(rf, ctx) { if (rf & 1) {
-    const _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_21_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r15); const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r14.onIncreaseTextButtonClick(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 14);
+    const _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_21_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r16); const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r15.onIncreaseTextButtonClick(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -123,7 +123,7 @@ function AppComponent_h5_25_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Button Color: ", ctx_r5.color, "px");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Button Color: ", ctx_r5.color, "px ");
 } }
 function AppComponent_h5_26_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h5");
@@ -145,28 +145,41 @@ function AppComponent_h5_29_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function AppComponent_ng_template_33_Template(rf, ctx) { if (rf & 1) {
-    const _r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_33_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r17); const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r16.onTextToSpeechClick(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 14);
+    const _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_33_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r18); const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r17.onTextToSpeechClick(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r9.currentTextToSpeechIcon);
 } }
+function AppComponent_ng_template_39_Template(rf, ctx) { if (rf & 1) {
+    const _r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_39_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r20); const ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r19.onAutoScrollButtonClick(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r10.currentAutoScrollIcon);
+} }
 class AppComponent {
     constructor() {
-        this.title = 'disability-chrome-extension';
+        this.title = "disability-chrome-extension";
         this.focusSelected = false;
         this.textHighlightingSelected = false;
         this.increaseTextButtonSelected = false;
         this.textToSpeechSelected = false;
+        this.autoScrollingSelected = false;
         this.focusIconColor = "red";
         this.currentFocusIcon = "pi pi-eye-slash";
         this.currentTextHighlightingIcon = "pi pi-eye-slash";
         this.currentIncreaseTextButtonIcon = "pi pi-eye-slash";
         this.currentTextToSpeechIcon = "pi pi-eye-slash";
+        this.currentAutoScrollIcon = "pi pi-eye-slash";
         this.blurIntensity = 3;
         this.textSize = 110;
     }
@@ -198,13 +211,13 @@ class AppComponent {
         this.textToSpeechSelected = !this.textToSpeechSelected;
         this.setTextToSpeechIcons();
         if (this.textToSpeechSelected) {
-            chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
                 let message = "enableTextToSpeech";
                 chrome.tabs.sendMessage(tabs[0].id, message);
             });
         }
         else {
-            chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
                 let message = "disableTextToSpeech";
                 chrome.tabs.sendMessage(tabs[0].id, message);
             });
@@ -227,24 +240,32 @@ class AppComponent {
             this.currentIncreaseTextButtonIcon = "pi pi-eye-slash";
         }
     }
+    setAutoScrollIcons() {
+        if (this.autoScrollingSelected) {
+            this.currentAutoScrollIcon = "pi pi-eye";
+        }
+        else {
+            this.currentAutoScrollIcon = "pi pi-eye-slash";
+        }
+    }
     onFocusClick() {
         this.focusSelected = !this.focusSelected;
         this.setFocusIcons();
         //chrome.storage.sync.set({'focusSelected': this.focusSelected});
         if (this.focusSelected) {
-            chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
                 let message = "enableFocusHoveredArea:" + this.blurIntensity;
                 chrome.tabs.sendMessage(tabs[0].id, message);
             });
         }
         else {
-            chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
                 chrome.tabs.sendMessage(tabs[0].id, "disableFocusHoveredArea");
             });
         }
     }
     updateBlurIntensity() {
-        chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             let message = "updateBlurIntensity:" + this.blurIntensity;
             chrome.tabs.sendMessage(tabs[0].id, message);
         });
@@ -253,41 +274,58 @@ class AppComponent {
         this.textHighlightingSelected = !this.textHighlightingSelected;
         this.setTextHighlightingIcons();
         if (this.textHighlightingSelected) {
-            chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
                 let message = "enableTextHighlighting";
                 chrome.tabs.sendMessage(tabs[0].id, message);
             });
         }
         else {
-            chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
                 let message = "disableTextHighlighting";
                 chrome.tabs.sendMessage(tabs[0].id, message);
             });
         }
     }
+    onAutoScrollButtonClick() {
+        this.autoScrollingSelected = !this.autoScrollingSelected;
+        this.setAutoScrollIcons();
+        if (this.autoScrollingSelected) {
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+                let message = "enableAutoScrolling";
+                chrome.tabs.sendMessage(tabs[0].id, message);
+            });
+        }
+        else {
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+                let message = "disableAutoScrolling";
+                chrome.tabs.sendMessage(tabs[0].id, message);
+            });
+        }
+    }
+    //step 2
     onIncreaseTextButtonClick() {
         this.increaseTextButtonSelected = !this.increaseTextButtonSelected;
         this.setIncreaseButtonSizeIcons();
         if (this.increaseTextButtonSelected) {
-            chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
                 let message = "enableIncreaseTextButton:" + this.color;
                 chrome.tabs.sendMessage(tabs[0].id, message);
             });
         }
         else {
-            chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
                 chrome.tabs.sendMessage(tabs[0].id, "disableIncreaseTextButton");
             });
         }
     }
     updateButtonColor() {
-        chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             let message = "updateButtonColor:" + this.color;
             chrome.tabs.sendMessage(tabs[0].id, message);
         });
     }
     updateTextSize() {
-        chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             let message = "updateTextSize:" + this.textSize;
             console.log(message);
             chrome.tabs.sendMessage(tabs[0].id, message);
@@ -295,7 +333,7 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 37, vars: 29, consts: [[1, "body"], [1, "header"], ["src", "icon.png", "alt", "Logo", 1, "center"], [1, "space"], ["header", "Focus Content", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pTemplate", "icons"], [4, "ngIf"], [3, "animate", "ngModel", "step", "min", "max", "disabled", "ngModelChange", "onSlideEnd"], [1, "less-space"], ["header", "Text Highlighting", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Increase Text and Button Sizing", "iconPos", "end", "collapsed", "true", 3, "toggleable"], [3, "ngModel", "inline", "disabled", "ngModelChange", "onChange"], ["header", "Text-to-Speech", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pButton", "", "pTooltip", "Toggle focused content on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], [2, "font-size", "1.5rem"], ["pButton", "", "pTooltip", "Toggle text highlighting on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle increased text and button sizing", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle text-to-speech on this page", 1, "p-panel-header-icon", "p-link", 3, "click"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 43, vars: 30, consts: [[1, "body"], [1, "header"], ["src", "icon.png", "alt", "Logo", 1, "center"], [1, "space"], ["header", "Focus Content", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pTemplate", "icons"], [4, "ngIf"], [3, "animate", "ngModel", "step", "min", "max", "disabled", "ngModelChange", "onSlideEnd"], [1, "less-space"], ["header", "Text Highlighting", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Increase Text and Button Sizing", "iconPos", "end", "collapsed", "true", 3, "toggleable"], [3, "ngModel", "inline", "disabled", "ngModelChange", "onChange"], ["header", "Text-to-Speech", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Auto Scrolling", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pButton", "", "pTooltip", "Toggle focused content on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], [2, "font-size", "1.5rem"], ["pButton", "", "pTooltip", "Toggle text highlighting on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle increased text and button sizing", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle text-to-speech on this page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle keyboard auto scrolling on the page", 1, "p-panel-header-icon", "p-link", 3, "click"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 2);
@@ -356,6 +394,16 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "p-panel", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](39, AppComponent_ng_template_39_Template, 2, 2, "ng-template", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, " This lets you scroll through content easy! Use the up and down arrow keys to jump to important content quickly. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
@@ -386,6 +434,8 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("animate", true)("ngModel", ctx.textSize)("step", 10)("min", 110)("max", 150)("disabled", !ctx.increaseTextButtonSelected);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("toggleable", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("toggleable", true);
     } }, directives: [primeng_panel__WEBPACK_IMPORTED_MODULE_1__["Panel"], primeng_api__WEBPACK_IMPORTED_MODULE_2__["PrimeTemplate"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], primeng_slider__WEBPACK_IMPORTED_MODULE_4__["Slider"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"], primeng_colorpicker__WEBPACK_IMPORTED_MODULE_6__["ColorPicker"], primeng_button__WEBPACK_IMPORTED_MODULE_7__["ButtonDirective"], primeng_tooltip__WEBPACK_IMPORTED_MODULE_8__["Tooltip"]], styles: [".header[_ngcontent-%COMP%] {\n  height: 20%;\n}\n\nimg[_ngcontent-%COMP%] {\n  max-width: 20%;\n  height: auto;\n}\n\n.space[_ngcontent-%COMP%] {\n  margin-top: 20px;\n}\n\n.less-space[_ngcontent-%COMP%] {\n  margin-top: 5px;\n}\n\n.center[_ngcontent-%COMP%] {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 50%;\n}\n\n.body[_ngcontent-%COMP%] {\n  min-width: 500px;\n  min-height: 500px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQUE7QUFDRjs7QUFFQTtFQUNFLGNBQUE7RUFDQSxZQUFBO0FBQ0Y7O0FBRUE7RUFDRSxnQkFBQTtBQUNGOztBQUVBO0VBQ0UsZUFBQTtBQUNGOztBQUNBO0VBQ0ksY0FBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxVQUFBO0FBRUo7O0FBQ0E7RUFDSSxnQkFBQTtFQUNBLGlCQUFBO0FBRUoiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlciB7XG4gIGhlaWdodDogMjAlO1xufVxuXG5pbWcge1xuICBtYXgtd2lkdGg6IDIwJTtcbiAgaGVpZ2h0OiBhdXRvO1xufVxuXG4uc3BhY2Uge1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4ubGVzcy1zcGFjZSB7XG4gIG1hcmdpbi10b3A6IDVweDtcbn1cbi5jZW50ZXIge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICAgIG1hcmdpbi1yaWdodDogYXV0bztcbiAgICB3aWR0aDogNTAlO1xuICB9XG5cbi5ib2R5IHtcbiAgICBtaW4td2lkdGg6IDUwMHB4O1xuICAgIG1pbi1oZWlnaHQ6IDUwMHB4O1xufSJdfQ== */"] });
 
