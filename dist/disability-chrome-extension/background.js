@@ -1,4 +1,4 @@
-let currWindowID = 1;
+let chromeIds = [];
 
 function playSound(audioContent) {
     let url = chrome.runtime.getURL('audio.html');
@@ -6,24 +6,32 @@ function playSound(audioContent) {
     // set this string dynamically in your code, this is just an example
     // this will play audio content at half the volume and close the popup after a second
     url += '?volume=0.5&src=' + encodeURIComponent(audioContent);
-    chrome.windows.getAll().then(response => {
-        console.log(response);
-        response.forEach(window => {
-            if (window.id !== currWindowID) {
-                console.log(window.id);
-                chrome.windows.remove(window.id);
-            }
-        })
-    });
 
-    chrome.windows.create({
-        type: 'popup',
-        focused: false,
-        top: 1,
-        left: 1,
-        height: 1,
-        width: 1,
-        url,
+    popupId = 0;
+    chrome.windows.getAll().then((response) => {
+        if (chromeIds.length !== 0) {
+            response.forEach((windowVal) => {
+                if (!chromeIds.includes(windowVal.id)) {
+                    console.log(windowVal.id);
+                    chrome.windows.remove(parseInt(windowVal.id));
+                }
+            })
+                
+            chromeIds = [];
+        }
+        response.forEach(windowVal => {
+            chromeIds.push(windowVal.id);
+        })
+    }).then(() => {
+        chrome.windows.create({
+            type: 'popup',
+            focused: false,
+            top: 1,
+            left: 1,
+            height: 1,
+            width: 1,
+            url
+        });
     });
 }
 

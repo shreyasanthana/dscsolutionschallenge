@@ -17,7 +17,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! /Users/aayushseth/Documents/side projects/chrome-dsc/src/main.ts */
+      /*! /Users/ninaadlakshman/Desktop/Coding Projects/newcode/src/main.ts */
       "zUnb");
       /***/
     },
@@ -137,16 +137,16 @@
 
       function AppComponent_ng_template_6_Template(rf, ctx) {
         if (rf & 1) {
-          var _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_6_Template_button_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r14);
 
-            var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+            var ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-            return ctx_r11.onFocusClick();
+            return ctx_r13.onFocusClick();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
@@ -193,16 +193,16 @@
 
       function AppComponent_ng_template_15_Template(rf, ctx) {
         if (rf & 1) {
-          var _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_15_Template_button_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r16);
 
-            var ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+            var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-            return ctx_r13.onTextHighlightingClick();
+            return ctx_r15.onTextHighlightingClick();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
@@ -219,35 +219,7 @@
         }
       }
 
-      function AppComponent_ng_template_21_Template(rf, ctx) {
-        if (rf & 1) {
-          var _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_21_Template_button_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r16);
-
-            var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-            return ctx_r15.onIncreaseTextButtonClick();
-          });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r4.currentIncreaseTextButtonIcon);
-        }
-      }
-
-      function AppComponent_h5_25_Template(rf, ctx) {
+      function AppComponent_h5_19_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h5");
 
@@ -257,21 +229,49 @@
         }
 
         if (rf & 2) {
-          var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Button Color: ", ctx_r5.color, "px ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Highlight Color: ", ctx_r4.textHighlightingColor, " ");
         }
       }
 
-      function AppComponent_h5_26_Template(rf, ctx) {
+      function AppComponent_h5_20_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h5");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Select button color");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      function AppComponent_ng_template_24_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_24_Template_button_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r18);
+
+            var ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r17.onIncreaseTextButtonClick();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r6.currentIncreaseTextButtonIcon);
         }
       }
 
@@ -289,7 +289,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Text Size: ", ctx_r7.textSize, "%");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Button Color: ", ctx_r7.textSizeColor, " ");
         }
       }
 
@@ -297,27 +297,17 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h5");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Select text size");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Select button color");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
       }
 
-      function AppComponent_ng_template_33_Template(rf, ctx) {
+      function AppComponent_h5_31_Template(rf, ctx) {
         if (rf & 1) {
-          var _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h5");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 18);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_33_Template_button_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r18);
-
-            var ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-            return ctx_r17.onTextToSpeechClick();
-          });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -327,22 +317,32 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r9.currentTextToSpeechIcon);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Text Size: ", ctx_r9.textSize, "%");
         }
       }
 
-      function AppComponent_ng_template_39_Template(rf, ctx) {
+      function AppComponent_h5_32_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h5");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Select text size");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      function AppComponent_ng_template_36_Template(rf, ctx) {
         if (rf & 1) {
           var _r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 19);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 18);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_39_Template_button_click_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_36_Template_button_click_0_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r20);
 
             var ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-            return ctx_r19.onAutoScrollButtonClick();
+            return ctx_r19.onTextToSpeechClick();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
@@ -351,11 +351,39 @@
         }
 
         if (rf & 2) {
-          var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r10.currentAutoScrollIcon);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r11.currentTextToSpeechIcon);
+        }
+      }
+
+      function AppComponent_ng_template_42_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_ng_template_42_Template_button_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r22);
+
+            var ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r21.onAutoScrollButtonClick();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx_r12.currentAutoScrollIcon);
         }
       }
 
@@ -376,6 +404,8 @@
           this.currentTextToSpeechIcon = "pi pi-eye-slash";
           this.currentAutoScrollIcon = "pi pi-eye-slash";
           this.blurIntensity = 3;
+          this.textHighlightingColor = "#FFFF00";
+          this.textSizeColor = "red";
           this.textSize = 110;
         }
 
@@ -558,7 +588,7 @@
                 active: true,
                 currentWindow: true
               }, function (tabs) {
-                var message = "enableIncreaseTextButton:" + _this3.color;
+                var message = "enableIncreaseTextButton:" + _this3.textSizeColor;
                 chrome.tabs.sendMessage(tabs[0].id, message);
               });
             } else {
@@ -579,20 +609,33 @@
               active: true,
               currentWindow: true
             }, function (tabs) {
-              var message = "updateButtonColor:" + _this4.color;
+              var message = "updateButtonColor:" + _this4.textSizeColor;
               chrome.tabs.sendMessage(tabs[0].id, message);
             });
           }
         }, {
-          key: "updateTextSize",
-          value: function updateTextSize() {
+          key: "updateTextHighlightingColor",
+          value: function updateTextHighlightingColor() {
             var _this5 = this;
 
             chrome.tabs.query({
               active: true,
               currentWindow: true
             }, function (tabs) {
-              var message = "updateTextSize:" + _this5.textSize;
+              var message = "updateTextHighlightingColor:" + _this5.textHighlightingColor;
+              chrome.tabs.sendMessage(tabs[0].id, message);
+            });
+          }
+        }, {
+          key: "updateTextSize",
+          value: function updateTextSize() {
+            var _this6 = this;
+
+            chrome.tabs.query({
+              active: true,
+              currentWindow: true
+            }, function (tabs) {
+              var message = "updateTextSize:" + _this6.textSize;
               console.log(message);
               chrome.tabs.sendMessage(tabs[0].id, message);
             });
@@ -609,9 +652,9 @@
       AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: AppComponent,
         selectors: [["app-root"]],
-        decls: 43,
-        vars: 30,
-        consts: [[1, "body"], [1, "header"], ["src", "icon.png", "alt", "Logo", 1, "center"], [1, "space"], ["header", "Focus Content", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pTemplate", "icons"], [4, "ngIf"], [3, "animate", "ngModel", "step", "min", "max", "disabled", "ngModelChange", "onSlideEnd"], [1, "less-space"], ["header", "Text Highlighting", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Increase Text and Button Sizing", "iconPos", "end", "collapsed", "true", 3, "toggleable"], [3, "ngModel", "inline", "disabled", "ngModelChange", "onChange"], ["header", "Text-to-Speech", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Auto Scrolling", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pButton", "", "pTooltip", "Toggle focused content on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], [2, "font-size", "1.5rem"], ["pButton", "", "pTooltip", "Toggle text highlighting on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle increased text and button sizing", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle text-to-speech on this page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle keyboard auto scrolling on the page", 1, "p-panel-header-icon", "p-link", 3, "click"]],
+        decls: 46,
+        vars: 35,
+        consts: [[1, "body"], [1, "header"], ["src", "icon.png", "alt", "Logo", 1, "center"], [1, "space"], ["header", "Focus Content", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pTemplate", "icons"], [4, "ngIf"], [3, "animate", "ngModel", "step", "min", "max", "disabled", "ngModelChange", "onSlideEnd"], [1, "less-space"], ["header", "Text Highlighting", "iconPos", "end", "collapsed", "true", 3, "toggleable"], [3, "ngModel", "inline", "disabled", "ngModelChange", "onChange"], ["header", "Increase Text and Button Sizing", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Text-to-Speech", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Auto Scrolling", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pButton", "", "pTooltip", "Toggle focused content on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], [2, "font-size", "1.5rem"], ["pButton", "", "pTooltip", "Toggle text highlighting on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle increased text and button sizing", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle text-to-speech on this page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle keyboard auto scrolling on the page", 1, "p-panel-header-icon", "p-link", 3, "click"]],
         template: function AppComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -672,37 +715,37 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, AppComponent_h5_19_Template, 2, 1, "h5", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, AppComponent_h5_20_Template, 2, 0, "h5", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "p-colorPicker", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "p-panel", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](21, AppComponent_ng_template_21_Template, 2, 2, "ng-template", 5);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "p");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " This helps increase the size of button and select its color to make buttons easier to read. ");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, AppComponent_h5_25_Template, 2, 1, "h5", 6);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, AppComponent_h5_26_Template, 2, 0, "h5", 6);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "p-colorPicker", 11);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_p_colorPicker_ngModelChange_27_listener($event) {
-              return ctx.color = $event;
-            })("onChange", function AppComponent_Template_p_colorPicker_onChange_27_listener() {
-              return ctx.updateButtonColor();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_p_colorPicker_ngModelChange_21_listener($event) {
+              return ctx.textHighlightingColor = $event;
+            })("onChange", function AppComponent_Template_p_colorPicker_onChange_21_listener() {
+              return ctx.updateTextHighlightingColor();
             });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "p-panel", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, AppComponent_ng_template_24_Template, 2, 2, "ng-template", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "p");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, " This helps increase the size of button and select its color to make buttons easier to read. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -710,11 +753,25 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](29, AppComponent_h5_29_Template, 2, 0, "h5", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "p-slider", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "p-colorPicker", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_p_slider_ngModelChange_30_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_p_colorPicker_ngModelChange_30_listener($event) {
+              return ctx.textSizeColor = $event;
+            })("onChange", function AppComponent_Template_p_colorPicker_onChange_30_listener() {
+              return ctx.updateButtonColor();
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, AppComponent_h5_31_Template, 2, 1, "h5", 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](32, AppComponent_h5_32_Template, 2, 0, "h5", 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "p-slider", 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AppComponent_Template_p_slider_ngModelChange_33_listener($event) {
               return ctx.textSize = $event;
-            })("onSlideEnd", function AppComponent_Template_p_slider_onSlideEnd_30_listener() {
+            })("onSlideEnd", function AppComponent_Template_p_slider_onSlideEnd_33_listener() {
               return ctx.updateTextSize();
             });
 
@@ -726,19 +783,17 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "p-panel", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "p-panel", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](33, AppComponent_ng_template_33_Template, 2, 2, "ng-template", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](36, AppComponent_ng_template_36_Template, 2, 2, "ng-template", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "p");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, " It will speak whatever text is being hovered on. Use arrow keys to change the hover. ");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, " It will speak whatever text is being hovered on. Use arrow keys to change the hover. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -746,17 +801,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "p-panel", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](39, AppComponent_ng_template_39_Template, 2, 2, "ng-template", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "p-panel", 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](42, AppComponent_ng_template_42_Template, 2, 2, "ng-template", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, " This lets you scroll through content easy! Use the up and down arrow keys to jump to important content quickly. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "p");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, " This lets you scroll through content easy! Use the up and down arrow keys to jump to important content quickly. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -794,7 +851,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("toggleable", true);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.textHighlightingSelected);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.textHighlightingSelected);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.textHighlightingColor)("inline", true)("disabled", !ctx.textHighlightingSelected);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("color", ctx.focusIconColor);
 
@@ -810,7 +879,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.color)("inline", true)("disabled", !ctx.increaseTextButtonSelected);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.textSizeColor)("inline", true)("disabled", !ctx.increaseTextButtonSelected);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 

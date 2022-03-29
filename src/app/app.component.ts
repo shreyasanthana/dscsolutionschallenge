@@ -19,7 +19,8 @@ export class AppComponent implements OnInit {
   currentTextToSpeechIcon = "pi pi-eye-slash";
   currentAutoScrollIcon = "pi pi-eye-slash";
   blurIntensity: number = 3;
-  color: string;
+  textHighlightingColor: string = "#FFFF00";
+  textSizeColor: string = "red";
   textSize: number = 110;
 
   ngOnInit() {
@@ -154,7 +155,7 @@ export class AppComponent implements OnInit {
 
     if (this.increaseTextButtonSelected) {
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        let message = "enableIncreaseTextButton:" + this.color;
+        let message = "enableIncreaseTextButton:" + this.textSizeColor;
         chrome.tabs.sendMessage(tabs[0].id, message);
       });
     } else {
@@ -165,10 +166,18 @@ export class AppComponent implements OnInit {
   }
   updateButtonColor() {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      let message = "updateButtonColor:" + this.color;
+      let message = "updateButtonColor:" + this.textSizeColor;
       chrome.tabs.sendMessage(tabs[0].id, message);
     });
   }
+
+  updateTextHighlightingColor() {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      let message = "updateTextHighlightingColor:" + this.textHighlightingColor;
+      chrome.tabs.sendMessage(tabs[0].id, message);
+    });
+  }
+
   updateTextSize() {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       let message = "updateTextSize:" + this.textSize;

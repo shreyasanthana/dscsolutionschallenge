@@ -69,6 +69,16 @@
             highlight the text you are reading in order to make for a smoother
             reading experience.
           </p>
+          <h5 *ngIf="textHighlightingSelected">
+            Highlight Color: {{ textHighlightingColor }}
+          </h5>
+          <h5 *ngIf="!textHighlightingSelected">Select button color</h5>
+          <p-colorPicker
+            [(ngModel)]="textHighlightingColor"
+            [inline]="true"
+            [disabled]="!textHighlightingSelected"
+            (onChange)="updateTextHighlightingColor()"
+          ></p-colorPicker>
         </div>
       </p-panel>
     </div>
@@ -101,11 +111,11 @@
             buttons easier to read.
           </p>
           <h5 *ngIf="increaseTextButtonSelected">
-            Button Color: {{ color }}px
+            Button Color: {{ textSizeColor }}
           </h5>
           <h5 *ngIf="!increaseTextButtonSelected">Select button color</h5>
           <p-colorPicker
-            [(ngModel)]="color"
+            [(ngModel)]="textSizeColor"
             [inline]="true"
             [disabled]="!increaseTextButtonSelected"
             (onChange)="updateButtonColor()"
