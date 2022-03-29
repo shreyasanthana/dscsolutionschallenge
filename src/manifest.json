@@ -1,9 +1,12 @@
 {
   "manifest_version": 3,
 
-  "name": "Disability Chrome Extension",
-  "description": "This extension will help people with disabilites.",
-  "version": "2.0",
+  "name": "Reforge",
+  "description": "Our suite of tools, from increase text sizing to text-to-speech, make using the Internet easy for those with disabilities!",
+  "version": "0.0.1",
+  "icons": { "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+   "128": "icons/icon128.png" },
   "content_scripts": [
       {
         "matches": ["<all_urls>"],
@@ -11,7 +14,7 @@
       }
   ],
   "action": {
-   "default_icon": "icon.png",
+   "default_icon": "icons/icon.png",
    "default_popup": "index.html"
   },
   "background": {

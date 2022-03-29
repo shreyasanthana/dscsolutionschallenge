@@ -19,15 +19,29 @@ export class AppComponent implements OnInit {
   currentTextToSpeechIcon = "pi pi-eye-slash";
   currentAutoScrollIcon = "pi pi-eye-slash";
   blurIntensity: number = 3;
-  textHighlightingColor: string = "#FFFF00";
-  textSizeColor: string = "red";
+  textHighlightingColor: string = "#ffff00";
+  textSizeColor: string = "#ff0000";
   textSize: number = 110;
 
-  ngOnInit() {
-    // chrome.storage.sync.get(['focusSelected'], function(result) {
-    //   this.focusSelected = result;
-    //   this.setFocusIcons();
-    // });
+  ngOnInit(): void {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      let message = "disableTextToSpeech";
+      chrome.tabs.sendMessage(tabs[0].id, message);
+    });
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      chrome.tabs.sendMessage(tabs[0].id, "disableFocusHoveredArea");
+    });
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      let message = "disableAutoScrolling";
+      chrome.tabs.sendMessage(tabs[0].id, message);
+    });
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      chrome.tabs.sendMessage(tabs[0].id, "disableIncreaseTextButton");
+    });
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      let message = "disableTextHighlighting";
+      chrome.tabs.sendMessage(tabs[0].id, message);
+    });
   }
 
   setFocusIcons() {
@@ -73,7 +87,6 @@ export class AppComponent implements OnInit {
     }
   }
 
-  //step 1
   setIncreaseButtonSizeIcons() {
     if (this.increaseTextButtonSelected) {
       this.currentIncreaseTextButtonIcon = "pi pi-eye";
@@ -93,8 +106,6 @@ export class AppComponent implements OnInit {
   onFocusClick() {
     this.focusSelected = !this.focusSelected;
     this.setFocusIcons();
-
-    //chrome.storage.sync.set({'focusSelected': this.focusSelected});
     if (this.focusSelected) {
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         let message = "enableFocusHoveredArea:" + this.blurIntensity;
@@ -148,7 +159,6 @@ export class AppComponent implements OnInit {
     }
   }
 
-  //step 2
   onIncreaseTextButtonClick() {
     this.increaseTextButtonSelected = !this.increaseTextButtonSelected;
     this.setIncreaseButtonSizeIcons();
@@ -181,7 +191,6 @@ export class AppComponent implements OnInit {
   updateTextSize() {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       let message = "updateTextSize:" + this.textSize;
-      console.log(message);
       chrome.tabs.sendMessage(tabs[0].id, message);
     });
   }

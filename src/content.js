@@ -14,7 +14,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     let numIndex = message.indexOf(":") + 1;
     textHighlightingColor = message.substring(numIndex);
   } else if (message.includes("disableTextHighlighting")) {
-    disableTextHighlighting();
+    disableTextEventListeners();
   } else if (
     message.includes("enableIncreaseTextButton") ||
     message.includes("updateButtonColor")
@@ -33,6 +33,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     disableIncreaseTextButton();
   } else if (message.includes("enableTextToSpeech")) {
     enableTextToSpeech();
+  } else if (message.includes("disableTextToSpeech")) {
+    disableTextToSpeech();
   } else if (message.includes("enableAutoScrolling")) {
     enableAutoScrolling();
   } else if (message.includes("disableAutoScrolling")) {
@@ -107,7 +109,7 @@ function disableFocusHoveredArea() {
   window.location.reload();
 }
 
-function disableTextHighlighting() {
+function disableTextEventListeners() {
   for (var i = 0; i < textElements.length; i++) {
     for (var element = 0; element < textElements[i].length; element++) {
       textElements[i][element].removeEventListener(
@@ -159,7 +161,6 @@ function applyFontAndHighlight(element, color, sizeOfTextFormat) {
     element.style.fontSize = sizeOfTextFormat + "%";
     element.style.background = color;
   } catch (exception_var) {
-    console.log("no changes needed");
   }
   if (element.hasChildNodes()) {
     element.childNodes.forEach(applyFontAndHighlight);
@@ -173,7 +174,6 @@ function enableTextToSpeech() {
     }
   }
   let textElementIndex = 0;
-  var storedAudioFiles = new Object();
   document.onkeydown = function (event) {
     switch (event.keyCode) {
       case 37:
@@ -221,9 +221,16 @@ function synthesizeSpeech(text) {
     .then((data) => {
       const playableAudioContent = data.audioContent;
       chrome.runtime.sendMessage({
-        playableAudioContent,
+        playSound: playableAudioContent,
       });
     });
+}
+
+function disableTextToSpeech() {
+  disableTextEventListeners();
+  chrome.runtime.sendMessage({
+    stopSound: "stopSound"
+  });
 }
 
 

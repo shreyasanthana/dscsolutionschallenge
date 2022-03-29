@@ -404,17 +404,47 @@
           this.currentTextToSpeechIcon = "pi pi-eye-slash";
           this.currentAutoScrollIcon = "pi pi-eye-slash";
           this.blurIntensity = 3;
-          this.textHighlightingColor = "#FFFF00";
-          this.textSizeColor = "red";
+          this.textHighlightingColor = "#ffff00";
+          this.textSizeColor = "#ff0000";
           this.textSize = 110;
         }
 
         _createClass(AppComponent, [{
           key: "ngOnInit",
-          value: function ngOnInit() {// chrome.storage.sync.get(['focusSelected'], function(result) {
-            //   this.focusSelected = result;
-            //   this.setFocusIcons();
-            // });
+          value: function ngOnInit() {
+            chrome.tabs.query({
+              active: true,
+              currentWindow: true
+            }, function (tabs) {
+              var message = "disableTextToSpeech";
+              chrome.tabs.sendMessage(tabs[0].id, message);
+            });
+            chrome.tabs.query({
+              active: true,
+              currentWindow: true
+            }, function (tabs) {
+              chrome.tabs.sendMessage(tabs[0].id, "disableFocusHoveredArea");
+            });
+            chrome.tabs.query({
+              active: true,
+              currentWindow: true
+            }, function (tabs) {
+              var message = "disableAutoScrolling";
+              chrome.tabs.sendMessage(tabs[0].id, message);
+            });
+            chrome.tabs.query({
+              active: true,
+              currentWindow: true
+            }, function (tabs) {
+              chrome.tabs.sendMessage(tabs[0].id, "disableIncreaseTextButton");
+            });
+            chrome.tabs.query({
+              active: true,
+              currentWindow: true
+            }, function (tabs) {
+              var message = "disableTextHighlighting";
+              chrome.tabs.sendMessage(tabs[0].id, message);
+            });
           }
         }, {
           key: "setFocusIcons",
@@ -468,8 +498,7 @@
             } else {
               this.currentTextToSpeechIcon = "pi pi-eye-slash";
             }
-          } //step 1
-
+          }
         }, {
           key: "setIncreaseButtonSizeIcons",
           value: function setIncreaseButtonSizeIcons() {
@@ -494,7 +523,7 @@
             var _this = this;
 
             this.focusSelected = !this.focusSelected;
-            this.setFocusIcons(); //chrome.storage.sync.set({'focusSelected': this.focusSelected});
+            this.setFocusIcons();
 
             if (this.focusSelected) {
               chrome.tabs.query({
@@ -573,8 +602,7 @@
                 chrome.tabs.sendMessage(tabs[0].id, message);
               });
             }
-          } //step 2
-
+          }
         }, {
           key: "onIncreaseTextButtonClick",
           value: function onIncreaseTextButtonClick() {
@@ -636,7 +664,6 @@
               currentWindow: true
             }, function (tabs) {
               var message = "updateTextSize:" + _this6.textSize;
-              console.log(message);
               chrome.tabs.sendMessage(tabs[0].id, message);
             });
           }
@@ -653,8 +680,8 @@
         type: AppComponent,
         selectors: [["app-root"]],
         decls: 46,
-        vars: 35,
-        consts: [[1, "body"], [1, "header"], ["src", "icon.png", "alt", "Logo", 1, "center"], [1, "space"], ["header", "Focus Content", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pTemplate", "icons"], [4, "ngIf"], [3, "animate", "ngModel", "step", "min", "max", "disabled", "ngModelChange", "onSlideEnd"], [1, "less-space"], ["header", "Text Highlighting", "iconPos", "end", "collapsed", "true", 3, "toggleable"], [3, "ngModel", "inline", "disabled", "ngModelChange", "onChange"], ["header", "Increase Text and Button Sizing", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Text-to-Speech", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Auto Scrolling", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pButton", "", "pTooltip", "Toggle focused content on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], [2, "font-size", "1.5rem"], ["pButton", "", "pTooltip", "Toggle text highlighting on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle increased text and button sizing", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle text-to-speech on this page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle keyboard auto scrolling on the page", 1, "p-panel-header-icon", "p-link", 3, "click"]],
+        vars: 33,
+        consts: [[1, "body"], [1, "header"], ["src", "icons/icon.png", "alt", "Logo", 1, "center"], [1, "space"], ["header", "Focus Content", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pTemplate", "icons"], [4, "ngIf"], [3, "animate", "ngModel", "step", "min", "max", "disabled", "ngModelChange", "onSlideEnd"], [1, "less-space"], ["header", "Text Highlighting", "iconPos", "end", "collapsed", "true", 3, "toggleable"], [3, "ngModel", "inline", "disabled", "ngModelChange", "onChange"], ["header", "Increase Text and Button Sizing", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Text-to-Speech", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["header", "Auto Scrolling", "iconPos", "end", "collapsed", "true", 3, "toggleable"], ["pButton", "", "pTooltip", "Toggle focused content on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], [2, "font-size", "1.5rem"], ["pButton", "", "pTooltip", "Toggle text highlighting on the page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle increased text and button sizing", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle text-to-speech on this page", 1, "p-panel-header-icon", "p-link", 3, "click"], ["pButton", "", "pTooltip", "Toggle keyboard auto scrolling on the page", 1, "p-panel-header-icon", "p-link", 3, "click"]],
         template: function AppComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -677,7 +704,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "p");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " This helps focus on what matters. Improve your focus by turning on this extension. It will blur the content around the page, keeping important headers like navigation bars, in order to make the process of activities like reading a Wikepedia article more efficient! ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " This helps focus on what matters. Improve your focus by turning on this extension. It will blur the content around the page, keeping important headers like navigation bars. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -745,7 +772,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "p");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, " This helps increase the size of button and select its color to make buttons easier to read. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, " This helps increase the size of buttons, and users can select color to make buttons easier to read. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -793,7 +820,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "p");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, " It will speak whatever text is being hovered on. Use arrow keys to change the hover. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, " It will speak whatever text is being selected. Use the left and right arrow keys to change the selection. Make sure to click somewhere on the page before moving the arrow keys. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -813,7 +840,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "p");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, " This lets you scroll through content easy! Use the up and down arrow keys to jump to important content quickly. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, " This lets you scroll through content easy! Use the W and S keys to jump to important content quickly. Make sure to click somewhere on the page before moving the arrow keys. ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -830,8 +857,6 @@
 
           if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("color", ctx.focusIconColor);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("toggleable", true);
 

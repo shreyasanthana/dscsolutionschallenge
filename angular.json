@@ -31,7 +31,7 @@
               "src/assets",
               "src/manifest.json",
               "src/content.js",
-              "src/icon.png",
+              "src/icons",
               "src/background.js",
               "src/audio.html",
               "src/audio.js"
