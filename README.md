@@ -1,27 +1,58 @@
-# DisabilityChromeExtension
+# Reforge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
+Reforge is a Chrome Extension that has a suite of tools to aid those with disabilities to freely view and browse the web.
 
-## Development server
+## Installation and Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Chrome Store
+1. Navigate to [Link] and download the extension!
 
-## Code scaffolding
+### Manual Setup
+1. Download the repository and make note of where you have the "dist" folder saved
+2. On Google Chrome, navigate to the settings tab and click "Extensions" under "Advanced"
+3. Select "Load Unpacked" and select the "dist" folder you saved earlier
+4. Make sure to pin the extension to your navigation bar and now your extension should be loaded and ready to use!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+### Increase Text and Button Highlighting
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Increases the size of buttons and the text on them. Also changes the background color of those buttons. Text size can be changed with a slider and the background color can be changed with a color picker to have full control over size and contrast.
 
-## Running unit tests
+Try it out on:
+- asdf
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Text to Speech
+Reads out the content in the currently selected paragraph tag. The current paragraph will have a black outline around it. Move to the next text block with the left or right arrow keys!
 
-## Running end-to-end tests
+Try it out on:
+- https://en.wikipedia.org/wiki/Blade_Runner
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Focus Content
+Focus Content blurs out surrounding content on the screen based on the location of the mouse. The container that the mouse is hovering over will be clear while the content around it will be blurred. Avoids blurring navbars.
 
-## Further help
+Try it out on:
+- asdf
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Text Highlighting
+Highlights the text on the current paragraph. Move to the next paragraph with the left and right arrow keys.
+
+Try it out on:
+- https://en.wikipedia.org/wiki/Blade_Runner
+
+### Auto Scrolling
+Scroll to important parts of the page with the 'w' and 's' keys.
+
+Try it out on:
+- https://en.wikipedia.org/wiki/Blade_Runner
+
+## Technologies Used
+- Chrome Extension APIs
+- Angular
+- PrimeNG
+- Google Cloud Text-to-Speech API
+- TypeScript
+- JavaScript
+- HTML
+- CSS
+- Git and Github
