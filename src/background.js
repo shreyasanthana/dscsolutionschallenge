@@ -3,8 +3,6 @@ let chromeIds = [];
 function playSound(audioContent) {
     let url = chrome.runtime.getURL('audio.html');
 
-    // set this string dynamically in your code, this is just an example
-    // this will play audio content at half the volume and close the popup after a second
     url += '?volume=0.5&src=' + encodeURIComponent(audioContent);
 
     popupId = 0;
@@ -35,6 +33,33 @@ function playSound(audioContent) {
     });
 }
 
+function stopSound(audioContent) {
+    let url = chrome.runtime.getURL('audio.html');
+
+    url += '?volume=0.5&src=' + encodeURIComponent(audioContent);
+
+    popupId = 0;
+    chrome.windows.getAll().then((response) => {
+        if (chromeIds.length !== 0) {
+            response.forEach((windowVal) => {
+                if (!chromeIds.includes(windowVal.id)) {
+                    console.log(windowVal.id);
+                    chrome.windows.remove(parseInt(windowVal.id));
+                }
+            })
+                
+            chromeIds = [];
+        }
+        response.forEach(windowVal => {
+            chromeIds.push(windowVal.id);
+        })
+    });
+}
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    playSound(message.playableAudioContent);
+    if ("playSound" in message) {
+        playSound(message.playSound);
+    } else if ("stopSound" in message) {
+        stopSound();
+    }
 });
