@@ -3,28 +3,31 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     message.includes("enableFocusHoveredArea") ||
     message.includes("updateBlurIntensity")
   ) {
-    var numIndex = message.indexOf(":") + 1;
-    var blurIntensity = message.substring(numIndex);
+    let numIndex = message.indexOf(":") + 1;
+    let blurIntensity = message.substring(numIndex);
     enableFocusHoveredArea(blurIntensity);
   } else if (message.includes("disableFocusHoveredArea")) {
     disableFocusHoveredArea();
   } else if (message.includes("enableTextHighlighting")) {
     enableTextHighlighting();
+  } else if (message.includes("updateTextHighlightingColor")) {
+    let numIndex = message.indexOf(":") + 1;
+    textHighlightingColor = message.substring(numIndex);
   } else if (message.includes("disableTextHighlighting")) {
     disableTextHighlighting();
   } else if (
     message.includes("enableIncreaseTextButton") ||
     message.includes("updateButtonColor")
   ) {
-    var val = message.indexOf(":") + 1;
-    var valOfColor = message.substring(val);
+    let val = message.indexOf(":") + 1;
+    let valOfColor = message.substring(val);
     enableButton(valOfColor, "110");
   } else if (
     message.includes("enableIncreaseTextButton") ||
     message.includes("updateTextSize")
   ) {
-    var sizeOfText = message.indexOf(":") + 1;
-    var sizeOfTextFormat = message.substring(sizeOfText);
+    let sizeOfText = message.indexOf(":") + 1;
+    let sizeOfTextFormat = message.substring(sizeOfText);
     enableButton(valOfColor, sizeOfTextFormat);
   } else if (message.includes("disableIncreaseTextButton")) {
     disableIncreaseTextButton();
@@ -51,6 +54,7 @@ var as = document.getElementsByTagName("a");
 var textElements = [paragraphs, h1s, h2s, h3s, h4s, h5s, h6s, lis, as];
 
 var largeDivsAndNavs = [];
+var textHighlightingColor = "#ffff00";
 
 for (const [key, value] of Object.entries(divs)) {
   if (value.offsetHeight > 400) {
@@ -129,25 +133,13 @@ function enableTextHighlighting() {
         if (this.style.backgroundColor) {
           originalBackgroundColor = this.style.backgroundColor;
         }
-
-        if (
-          this.style.color &&
-          val1ColorGreaterThanVal2Color(this.style.color, "#808080")
-        ) {
-          this.style.backgroundColor = "yellow";
-        } else {
-          this.style.backgroundColor = "red";
-        }
+        this.style.backgroundColor = textHighlightingColor;
       });
 
       textElements[i][element].addEventListener("mouseout", function () {
         this.style.backgroundColor = originalBackgroundColor;
       });
     }
-
-    textElements[i][element].addEventListener("mouseout", function () {
-      this.style.backgroundColor = originalBackgroundColor;
-    });
   }
 }
 
@@ -185,7 +177,6 @@ function enableTextToSpeech() {
   document.onkeydown = function (event) {
     switch (event.keyCode) {
       case 37:
-        console.log("Left arrow key pressed");
         textElementsList[textElementIndex].style.border = "transparent";
 
         textElementIndex--;
@@ -198,7 +189,6 @@ function enableTextToSpeech() {
         synthesizeSpeech(textToSpeak);
         break;
       case 39:
-        console.log("Right arrow key pressed");
         textElementsList[textElementIndex].style.border = "transparent";
 
         textElementIndex++;
@@ -230,25 +220,12 @@ function synthesizeSpeech(text) {
     .then((response) => response.json())
     .then((data) => {
       const playableAudioContent = data.audioContent;
-      console.log(playableAudioContent);
       chrome.runtime.sendMessage({
         playableAudioContent,
       });
     });
 }
 
-function val1ColorGreaterThanVal2Color(val1, val2) {
-  console.log("FIRST STYLE COLOR: " + color1);
-  console.log("Hex " + val2);
-  var color1 = parseInt(val1.substring(1), 16);
-  var color2 = parseInt(val2.substring(1), 16);
-
-  if (color1 < color2) {
-    return true;
-  } else {
-    return false;
-  }
-}
 
 function enableAutoScrolling() {
   let index = 0;
