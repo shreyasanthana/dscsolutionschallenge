@@ -5,7 +5,7 @@ Reforge is a Chrome Extension that has a suite of tools to aid those with disabi
 ## Installation and Setup
 
 ### Chrome Store
-1. Navigate to [Link] and download the extension!
+1. Navigate to the [Chrome Extension Store](https://chrome.google.com/webstore/detail/reforge/pjjdigfmcliiadkgmbghlimobgjmeoai?hl=en) and download the extension!
 
 ### Manual Setup
 1. Download the repository and make note of where you have the "dist" folder saved
