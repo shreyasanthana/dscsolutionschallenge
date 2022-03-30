@@ -39,6 +39,7 @@ Try it out on:
 - https://www.instagram.com/
 - https://www.fulcolibrary.org/
 - www.wsj.com
+- https://finance.yahoo.com/calendar/
 
 ### Text Highlighting
 Highlights the text on the current paragraph. Move to the next paragraph with the left and right arrow keys.
