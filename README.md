@@ -48,6 +48,7 @@ Try it out on:
 
 ## Technologies Used
 - Chrome Extension APIs
+- Chrome Web APIs
 - Angular
 - PrimeNG
 - Google Cloud Text-to-Speech API
