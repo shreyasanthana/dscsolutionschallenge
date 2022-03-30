@@ -9,7 +9,7 @@ Reforge is a Chrome Extension that has a suite of tools to aid those with disabi
 
 ### Manual Setup
 1. Download the repository and make note of where you have the "dist" folder saved
-2. On Google Chrome, navigate to the settings tab and click "Extensions" under "Advanced"
+2. On Google Chrome, navigate to the settings tab and click "Extensions" under "Advanced". This should put you in the "chrome://extensions" page.
 3. Select "Load Unpacked" and select the "dist" folder you saved earlier
 4. Make sure to pin the extension to your navigation bar and now your extension should be loaded and ready to use!
 
