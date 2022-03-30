@@ -206,7 +206,7 @@ function enableTextToSpeech() {
 
 function synthesizeSpeech(text) {
   const synthesizeURL =
-    "https://texttospeech.googleapis.com/v1/text:synthesize?key=AIzaSyDvALGSWt0xrrvSM6Q52art2s1nQuglQZo";
+    "https://texttospeech.googleapis.com/v1/text:synthesize?key=<YOUR API KEY>;
   const body = {
     input: { text: text },
     voice: { languageCode: "en-US", ssmlGender: "FEMALE" },
