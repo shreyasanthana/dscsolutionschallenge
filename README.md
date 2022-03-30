@@ -33,11 +33,12 @@ Try it out on:
 - Other Wikipedia pages
 
 ### Focus Content
-Focus Content blurs out surrounding content on the screen based on the location of the mouse. The container that the mouse is hovering over will be clear while the content around it will be blurred. Avoids blurring navbars.
+Focus Content blurs out surrounding content on the screen based on the location of the mouse. The container that the mouse is hovering over will be clear while the content around it will be blurred. Avoids blurring navbars. Note that blurring will be enabled once a user mouses over a panel, as the user should see the panel before it is blurred. 
 
 Try it out on:
 - https://www.instagram.com/
 - https://www.fulcolibrary.org/
+- www.wsj.com
 
 ### Text Highlighting
 Highlights the text on the current paragraph. Move to the next paragraph with the left and right arrow keys.
